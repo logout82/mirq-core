@@ -193,7 +193,6 @@ if [ "$?" -gt "0" ];
   then
     echo -e "${RED}Not all required packages were installed properly. Try to install them manually by running the following commands:${NC}\n"
     echo "apt-get update"
-    echo "apt-get update"
     echo "apt install -y htop"
  exit 1
 fi
@@ -246,9 +245,8 @@ function setup_node() {
 
 ##### Main #####
 clear
-
 checks
 prepare_system
-create_swap
+#create_swap
 download_node
 setup_node
