@@ -7,7 +7,7 @@ COIN_DAEMON='mrqd'
 COIN_CLI='mrq-cli'
 COIN_PATH='/usr/local/bin/'
 COIN_REPO='https://github.com/mirq-dev/mirq-core.git'
-COIN_TGZ='https://github.com/mirq-dev/mirq-core/releases/mirq-3.0.0-x86_64-linux-signed.tar.gz'
+COIN_TGZ='https://github.com/mirq-dev/mirq-core/releases/download/3.0.0/mirq-3.0.0-x86_64-linux-signed.tar.gz'
 COIN_ZIP=$(echo $COIN_TGZ | awk -F'/' '{print $NF}')
 COIN_NAME='mrq'
 COIN_PORT=55611
@@ -193,8 +193,6 @@ if [ "$?" -gt "0" ];
   then
     echo -e "${RED}Not all required packages were installed properly. Try to install them manually by running the following commands:${NC}\n"
     echo "apt-get update"
-    echo "apt -y install software-properties-common"
-    echo "apt-add-repository -y ppa:bitcoin/bitcoin"
     echo "apt-get update"
     echo "apt install -y htop"
  exit 1
